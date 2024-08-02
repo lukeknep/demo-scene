@@ -1,0 +1,1 @@
+{"version":2,"replicas":[{"count":2,"constraints":{"rack":"nyc"}},{"count":2,"constraints":{"rack":"nj"}}],"observers":[{"count":1,"constraints":{"rack":"nyc"}},{"count":1,"constraints":{"rack":"nj"}}]}

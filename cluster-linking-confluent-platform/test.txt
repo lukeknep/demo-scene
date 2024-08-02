@@ -1,0 +1,11 @@
+[2024-03-01 16:18:05,254] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+[2024-03-01 16:18:05,656] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+[2024-03-01 16:18:05,674] ERROR Exiting Kafka due to fatal exception (kafka.Kafka$)
+java.lang.IllegalArgumentException: requirement failed: inter.broker.listener.name must be a listener name defined in advertised.listeners. The valid options based on currently configured listeners are SASL_PLAINTEXT
+	at scala.Predef$.require(Predef.scala:337)
+	at kafka.server.KafkaConfig.validateValues(KafkaConfig.scala:4625)
+	at kafka.server.KafkaConfig.<init>(KafkaConfig.scala:4411)
+	at kafka.server.KafkaConfig.<init>(KafkaConfig.scala:3253)
+	at kafka.Kafka$.buildServer(Kafka.scala:71)
+	at kafka.Kafka$.main(Kafka.scala:90)
+	at kafka.Kafka.main(Kafka.scala)

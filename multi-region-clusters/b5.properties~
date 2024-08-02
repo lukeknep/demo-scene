@@ -1,0 +1,44 @@
+broker.id=105
+broker.rack=nj
+
+listeners=PLAINTEXT://:9592
+confluent.http.server.listeners=http://localhost:8592
+log.dirs=/tmp/kafka-mrc-105
+
+min.insync.replicas=3
+confluent.log.placement.constraints={   \
+    "version": 2,   \
+    "replicas": [   \
+        {   \
+            "count": 2,   \
+            "constraints": {   \
+                "rack": "nyc"   \
+            }   \
+        },   \
+        {   \
+            "count": 2,   \
+            "constraints": {   \
+                "rack": "nj"   \
+            }   \
+        }   \
+    ],   \
+    "observers": [   \
+      {   \
+          "count": 1,   \
+          "constraints": {   \
+              "rack": "nyc"   \
+          }   \
+      },   \
+      {   \
+          "count": 1,   \
+          "constraints": {   \
+              "rack": "nj"   \
+          }   \
+      }   \
+    ] \
+}   
+
+zookeeper.connect=localhost:2181
+password.encoder.secret=encoder-secret
+confluent.license.topic.replication.factor=1
+confluent.reporters.telemetry.auto.enable=false

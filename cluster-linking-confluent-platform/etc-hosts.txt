@@ -1,0 +1,9 @@
+##
+# Add these to your /etc/hosts file to make these URLs forward to your localhost
+##
+127.0.0.1	b1.west.kafka.mobile-c.com
+127.0.0.1	b2.west.kafka.mobile-c.com
+127.0.0.1	b3.west.kafka.mobile-c.com
+127.0.0.1	b1.west-dr.kafka.mobile-c.com
+127.0.0.1	b2.west-dr.kafka.mobile-c.com
+127.0.0.1	b3.west-dr.kafka.mobile-c.com
